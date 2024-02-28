@@ -1,0 +1,33 @@
+﻿@using MvcStok.Models.Entitiy
+@model List<TBLURUNLER>
+@{
+    ViewBag.Title = "UrunList";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<br />
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Ürün ID</th>
+            <th>Ürün Ad</th>
+            <th>Marka</th>
+            <th>Ürün Kategori</th>
+            <th>Fiyat</th>
+            <th>Stok</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.URUNID</td>
+                <td>@item.URUNAD</td>
+                <td>@item.MARKA</td>
+                <td>@item.URUNKATEGORI</td>
+                <td>@item.FIYAT</td>
+                <td>@item.STOK</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
