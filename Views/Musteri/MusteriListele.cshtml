@@ -13,6 +13,8 @@
             <th>Müşteri ID</th>
             <th>Müşteri Adı</th>
             <th>Müşteri Soyadı</th>
+            <th>SİL</th>
+            <th>GÜNCELLE</th>
         </tr>
     </thead>
     <tbody>
@@ -22,7 +24,10 @@
                 <td>@item.MUSTERIID</td>
                 <td>@item.MUSTERIAD</td>
                 <td>@item.MUSTERISOYAD</td>
+                <td><a href="/Musteri/Sil/@item.MUSTERIID/" class="btn btn-danger">SİL</a></td>
+                <td><a href="/Musteri/Guncelle/@item.MUSTERIID/" class="btn btn-success">Güncelle</a>
             </tr>
         }
     </tbody>
 </table>
+<a href="#" class="btn btn-primary">Müşteri Ekle</a>

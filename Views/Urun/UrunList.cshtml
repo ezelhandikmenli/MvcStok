@@ -14,6 +14,9 @@
             <th>Ürün Kategori</th>
             <th>Fiyat</th>
             <th>Stok</th>
+            <th>SİL</th>
+            <th>GÜNCELLE</th>
+        </tr>
         </tr>
     </thead>
     <tbody>
@@ -26,8 +29,11 @@
                 <td>@item.URUNKATEGORI</td>
                 <td>@item.FIYAT</td>
                 <td>@item.STOK</td>
+                <td><a href="/Urun/Sil/@item.URUNID" class="btn btn-danger">Sil</a> </td> 
+                <td><a href="/Urun/Guncelle/@item.URUNID" class="btn btn-success">Güncelle</a></td>  
             </tr>
         }
     </tbody>
 </table>
+<a href="#" class="btn btn-primary">Ürün Ekle</a>
 
