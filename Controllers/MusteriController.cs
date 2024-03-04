@@ -46,7 +46,7 @@ namespace MvcStok.Controllers
             musteri.MUSTERIAD = p1.MUSTERIAD;
             musteri.MUSTERISOYAD = p1.MUSTERISOYAD;
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("MusteriListele");
         }
     }
 }
