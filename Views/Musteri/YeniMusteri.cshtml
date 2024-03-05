@@ -1,4 +1,4 @@
-﻿
+﻿@model MvcStok.Models.Entitiy.TBLMUSTERI
 @{
     ViewBag.Title = "YeniMusteri";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
@@ -7,11 +7,15 @@
 <form class="form-group" method="post">
     <div>
         <label class="mt-3">Müşteri Adı</label>
-        <input type="text" class="form-control" name="MUSTERIAD" />
+        @*<input type="text" class="form-control" name="MUSTERIAD" />*@
+        @Html.TextBoxFor(m => m.MUSTERIAD, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MUSTERIAD, "", new { @style = "color:green" })
+
     </div>
     <div>
         <label class="mt-3">Müşteri Soyadı</label>
-        <input type="text" class="form-control" name="MUSTERISOYAD"/>
+        @Html.TextBoxFor(m => m.MUSTERISOYAD, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MUSTERISOYAD, "", new { @style = "color:green" })
     </div>
     <div>
         <button class="btn btn-info mt-3">Musteri Ekle</button>
