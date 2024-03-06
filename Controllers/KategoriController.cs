@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MvcStok.Models.Entitiy;
+
 namespace MvcStok.Controllers
 {
     public class KategoriController : Controller
@@ -12,6 +13,7 @@ namespace MvcStok.Controllers
         public ActionResult Index()
         {
             var degerler = db.TBLKATEGORI.ToList();
+            //var degerler = db.TBLKATEGORILER.ToList(;
             return View(degerler);
         }
         [HttpGet]
